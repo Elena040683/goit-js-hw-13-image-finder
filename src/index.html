@@ -5,10 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        id="search"
+        name="query"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+    </form>
 
+    <ul class="gallery">
+      <!-- Список <li> с карточками изображений -->
+    </ul>
+
+    <button id="more">Load more</button>
 
     <script src="./index.js"></script>
   </body>

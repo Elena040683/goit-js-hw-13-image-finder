@@ -1,0 +1,22 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 24px;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: auto;
+  height: 35px;
+  background-color: rgb(181, 199, 219);
+}
+
+#search {
+  border: 1px solid;
+  padding-left: 40px;
+  font-size: 30px;
+}
