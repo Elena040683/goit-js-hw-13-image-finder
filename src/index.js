@@ -2,8 +2,7 @@ import ImgTpl from './templates/img.hbs';
 import ApiService from './js/apiService';
 import LoadMoreBtn from './js/loadMore';
 
-import { inform, error } from '@pnotify/core';
-import '@pnotify/core/dist/PNotify.css';
+import { info, error } from '../node_modules/@pnotify/core/dist/PNotify.js';
 import '@pnotify/core/dist/BrightTheme.css';
 
 const refs = {
@@ -28,7 +27,7 @@ function onSearch(e) {
   newApiService.query = e.currentTarget.elements.query.value;
 
   if (newApiService.query === '') {
-    return inform({
+    return info({
       text: 'Enter the value!',
       delay: 1500,
       closerHover: true,
@@ -39,6 +38,9 @@ function onSearch(e) {
   loadMoreBtn.disable();
   newApiService.resetPage();
   newApiService.fetchImages().then(data => {
+    if (data.length === 0) {
+      return error({ text: 'Bad request.' });
+    }
     clearImagesContainer();
     renderImages(data);
     loadMoreBtn.enable();
