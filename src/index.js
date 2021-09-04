@@ -72,16 +72,3 @@ function handleBtnClick() {
     });
   }, 700);
 }
-
-// function onLoadMore() {
-//   fetchImages()
-//     .then(
-//       setTimeout(() => {
-//         window.scrollBy({
-//           top: document.documentElement.clientHeight - 100,
-//           behavior: 'smooth',
-//         });
-//       }, 1500),
-//     )
-//     .catch(err => console.log(err));
-// }
